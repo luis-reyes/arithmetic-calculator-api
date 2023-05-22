@@ -1,0 +1,32 @@
+version: '3'
+services:
+  arithmetic-calculator-api:
+    container_name: arithmetic-calculator-api
+    image: arithmetic-calculator-api
+    build:
+      context: .
+    ports:
+      - "5000:5000"
+    environment:
+      - DATABASE_URI=${DATABASE_URI}
+      - PRODUCTION_DATABASE_URI=${PRODUCTION_DATABASE_URI}
+      - SECRET_KEY=${SECRET_KEY}
+      - JWT_SECRET_KEY=${JWT_SECRET_KEY}
+      - RANDOM_STRING_URL=${RANDOM_STRING_URL}
+    depends_on:
+      - database
+
+  database:
+    container_name: database
+    image: postgres:12
+    ports:
+      - "5432"
+    environment:
+      - POSTGRES_USER=${DB_USER}
+      - POSTGRES_PASSWORD=${DB_PASSWORD}
+      - POSTGRES_DB=${DB_NAME}
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata: {}

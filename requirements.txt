@@ -1,0 +1,10 @@
+Flask
+Flask-SQLAlchemy
+Flask-Smorest
+marshmallow
+psycopg2-binary
+Flask-Bcrypt
+Flask-JWT-Extended
+pytest
+python-dotenv
+passlib
