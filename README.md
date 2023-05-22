@@ -32,10 +32,9 @@ To get started with the Arithmetic Calculator API, follow these steps:
     pip install -r requirements.txt
 
 3. Set up the environment variables:
-  DATABASE_URI: The connection URI for the PostgreSQL database.
-  SECRET_KEY: Secret key used for authentication.
-  JWT_SECRET_KEY: Secret key used for JWT token generation.
-  RANDOM_STRING_URL: URL for generating random strings.
+  DATABASE_URI: The connection URI for the PostgreSQL database.   
+  JWT_SECRET_KEY: Secret key used for JWT token generation.   
+  RANDOM_STRING_URL: URL for generating random strings.    
 
 4. Start the application:
    ```bash
