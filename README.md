@@ -8,6 +8,7 @@ This is a Flask API that serves as the backend for a Vue.js application. It prov
 - Secure Transactions: Endpoints to perform mathematical calculations securely by authenticating requests.
 - Error Handling: Proper error handling and response messages for various scenarios.
 - Database Integration: Integration with a database (PostgreSQL) for storing user information and transaction data.
+- Swagger documentation: Available at: /swagger-ui
 
 ## Technologies Used
 
