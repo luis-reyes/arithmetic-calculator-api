@@ -1,4 +1,4 @@
-# Flask API
+# Arithmetic Calculator
 
 This is a Flask API that serves as the backend for a Vue.js application. It provides endpoints to handle user authentication, perform mathematical calculations, and manage transactions.
 
