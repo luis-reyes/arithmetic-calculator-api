@@ -2,7 +2,11 @@
 
 This is a Flask API that serves as the backend for a Vue.js application. It provides endpoints to handle user authentication, perform mathematical calculations, and manage transactions.
 
-Live Version Swagger: http://ec2-3-15-30-72.us-east-2.compute.amazonaws.com:5000/swagger-ui
+## Live Version 
+Swagger: http://ec2-3-15-30-72.us-east-2.compute.amazonaws.com:5000/swagger-ui
+Server: AWS EC2
+Database: AWS RDS
+
 ## Features
 
 - User Authentication: Register and login endpoints for user authentication.
