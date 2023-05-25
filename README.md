@@ -80,5 +80,5 @@ The application requires the following configuration:
   - `controllers`: Contains service modules for user authentication and calculations.
   - `utils`: Contains utility functions.
   - `tests`: Contains unit tests for the API endpoints.
-  - v1
-   - `resources`: Contains the API resources and endpoints.
+  - v1 : current api version
+      - `resources`: Contains the API resources and endpoints.
