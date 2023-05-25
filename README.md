@@ -3,9 +3,9 @@
 This is a Flask API that serves as the backend for a Vue.js application. It provides endpoints to handle user authentication, perform mathematical calculations, and manage transactions.
 
 ## Live Version 
-- Base URL: [LIVE API](http://ec2-18-219-245-237.us-east-2.compute.amazonaws.com:5000) 
-- Swagger: http://ec2-18-219-245-237.us-east-2.compute.amazonaws.com:5000/swagger-ui
-- Postman collection: https://github.com/luis-reyes/arithmetic-calculator-api/blob/main/ArithmeticCalculatorAPI.postman_collection.json
+- Base URL: [LIVE API](http://ec2-18-219-245-237.us-east-2.compute.amazonaws.com:5000) <!-- Use postman collection. -->
+- Swagger: [Swagger-ui](http://ec2-18-219-245-237.us-east-2.compute.amazonaws.com:5000/swagger-ui)
+- Postman collection: [Collection](https://github.com/luis-reyes/arithmetic-calculator-api/blob/main/ArithmeticCalculatorAPI.postman_collection.json)
 - Server: AWS EC2
 - Database: AWS RDS
 
@@ -79,7 +79,7 @@ The following are the main API endpoints provided by the Flask API:
 6. Set up the database:
    - Configure the database connection details in `config.py`
 7. Start the Flask API: `python3 api/app.py`
-8. Access the API endpoints in the Vue application: http://ec2-18-219-245-237.us-east-2.compute.amazonaws.com:5173/login .
+8. Access the API endpoints in the Vue application: [FrontEnd](http://ec2-18-219-245-237.us-east-2.compute.amazonaws.com:5173/login)
 
 ## Configuration
 
