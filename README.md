@@ -3,7 +3,7 @@
 This is a Flask API that serves as the backend for a Vue.js application. It provides endpoints to handle user authentication, perform mathematical calculations, and manage transactions.
 
 ## Live Version 
-- Base URL:http://ec2-18-219-245-237.us-east-2.compute.amazonaws.com:5000 --api/v1/...
+- Base URL:http://ec2-18-219-245-237.us-east-2.compute.amazonaws.com:5000 
 - Swagger: http://ec2-18-219-245-237.us-east-2.compute.amazonaws.com:5000/swagger-ui
 - Postman collection: https://github.com/luis-reyes/arithmetic-calculator-api/blob/main/ArithmeticCalculatorAPI.postman_collection.json
 - Server: AWS EC2
@@ -54,8 +54,8 @@ The following are the main API endpoints provided by the Flask API:
 
 ## Setup and Usage
 
-1. Clone the repository: `git clone [https://github.com/your/repository.git](https://github.com/luis-reyes/arithmetic-calculator-api.git)`
-2. Navigate to the project directory: `cd .`
+1. Clone the repository: `git clone https://github.com/your/repository.git](https://github.com/luis-reyes/arithmetic-calculator-api.git`
+2. Navigate to the project directory: `cd arithmetic-calculator-api`
 3. Create a virtual environment: `python -m venv venv`
 4. Activate the virtual environment:
    - On Windows: `venv\Scripts\activate`
