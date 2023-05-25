@@ -52,6 +52,21 @@ The following are the main API endpoints provided by the Flask API:
   - Request Body: `{ "operation_id": 1, "num_1": 5, "num_2": 3 }`
   - Authorization: Bearer Token (JWT) required in the request headers.
 
+- `/api/v1/transactions/`:
+  - Method: GET
+  - Description: Retrieve a list of transactions with optional pagination and filtering.
+  - Query Parameters:
+    - `page` : Page number for pagination..
+    - `per_page` : Number of transactions per page. .
+    - `operation_id` (optional): Filter transactions by operation ID.
+  - Authorization: Bearer Token (JWT) required in the request headers.
+
+- `/api/v1/transactions/{transaction_id}`:
+  - Method: DELETE
+  - Description: Delete a specific transaction by transaction ID.
+  - Authorization: Bearer Token (JWT) required in the request headers.
+
+
 ## Setup and Usage
 
 1. Clone the repository: `git clone https://github.com/your/repository.git](https://github.com/luis-reyes/arithmetic-calculator-api.git`
@@ -70,7 +85,7 @@ The following are the main API endpoints provided by the Flask API:
 
 The application requires the following configuration:
 
-- Database Configuration: Update the database connection details in `config.py`
+- Database Configuration: Update the database connections details in `config.py`
 - Secret Key: Set a secret key in `config.py`
 
 ## Folder Structure
@@ -82,3 +97,11 @@ The application requires the following configuration:
   - `tests`: Contains unit tests for the API endpoints.
   - `v1` : current api version
       - `resources`: Contains the API resources and endpoints.
+
+## Improvements
+
+- Implement input validation for request payloads to ensure data integrity.
+- Add logging functionality to capture and analyze application logs.
+- Enhance error handling by providing more specific error messages and appropriate HTTP status codes.
+
+
