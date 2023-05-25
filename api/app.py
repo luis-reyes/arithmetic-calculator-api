@@ -1,6 +1,7 @@
 from flask import Flask
 from flask_jwt_extended import JWTManager
 from flask_smorest import Api
+from flask_cors import CORS
 
 from api.v1.resources.operation import operation_blp as OperationBlueprint
 from api.v1.resources.record import transaction_blp as TransactionBlueprint
@@ -17,6 +18,13 @@ def create_app(config_name):
     app = Flask(__name__)
     app.config.from_object(config_by_name[config_name])
     
+
+    #enable cors
+    #CORS(app, supports_credentials=True,resources={r"/.*": {"origins": "*"}})
+    CORS(app, resources={r"/api/*": {"origins": "*", "allow_headers": "*", "expose_headers": "*"}})
+
+
+
     # Initialize extensions
     db.init_app(app)
     jwt.init_app(app)
@@ -26,13 +34,16 @@ def create_app(config_name):
         db.create_all()
         OperationModel.generate_default_data()
 
-        
+    
     api.register_blueprint(OperationBlueprint, url_prefix='/api/v1/operations')
     api.register_blueprint(TransactionBlueprint, url_prefix='/api/v1/transactions')
     api.register_blueprint(UserBlueprint, url_prefix='/api/v1/users')
-
+    
     return app
+
+
 
 if __name__ == '__main__':
     app = create_app('development')
     app.run(host='0.0.0.0', port=5000)
+    

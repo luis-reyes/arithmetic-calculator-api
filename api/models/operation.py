@@ -13,17 +13,18 @@ class OperationModel(db.Model):
 
     @classmethod
     def generate_default_data(cls):
-        default_operations = [
-            {'type': 'addition', 'cost': 1.0},
-            {'type': 'subtraction', 'cost': 1.0},
-            {'type': 'multiplication', 'cost': 1.5},
-            {'type': 'division', 'cost': 2.0},
-            {'type': 'square_root', 'cost': 2.5},
-            {'type': 'random_string', 'cost': 3.0}
-        ]
+        if cls.query.count() == 0:
+            default_operations = [
+                {'type': 'addition', 'cost': 1.0},
+                {'type': 'subtraction', 'cost': 1.0},
+                {'type': 'multiplication', 'cost': 1.5},
+                {'type': 'division', 'cost': 2.0},
+                {'type': 'square_root', 'cost': 2.5},
+                {'type': 'random_string', 'cost': 3.0}
+            ]
 
-        for operation_data in default_operations:
-            operation = cls(**operation_data)
-            db.session.add(operation)
+            for operation_data in default_operations:
+                operation = cls(**operation_data)
+                db.session.add(operation)
 
-        db.session.commit()
+            db.session.commit()
