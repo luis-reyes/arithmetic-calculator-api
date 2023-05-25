@@ -1,0 +1,263 @@
+{
+	"info": {
+		"_postman_id": "20cb5a84-f01a-4110-9601-801a5c8f4279",
+		"name": "ArithmeticCalculatorAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "authentication",
+			"item": [
+				{
+					"name": "/login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"username\": \"example@example.com\",\n  \"password\": \"password123\" \n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/users/login",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"username\": \"example@example.com\",\n  \"password\": \"password123\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/users/register",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"users",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/<user_id> get user",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY4NDYyNTU0MCwianRpIjoiM2NmZTkyMDktNDg0NS00MWZjLTgzMTYtYTA2YTRiYWQxMGUwIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6NywibmJmIjoxNjg0NjI1NTQwLCJleHAiOjE2ODQ2MjkxNDB9.VtGt_ZFWuhssw9Kz0a2-wq07ctPwFFzsietI1J-b254",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/users/7",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"users",
+								"7"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "transactions",
+			"item": [
+				{
+					"name": "/transactions",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY4NDcxOTIzMCwianRpIjoiNmQ2N2ZlNWItMGZiMi00ZWJjLWE0ZmItZTNiMWE4NGNiMmM2IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MiwibmJmIjoxNjg0NzE5MjMwLCJleHAiOjE2ODQ3MjI4MzB9.3UWH9qEWZpJNIJ52GPlt6EEtoICLx98oibvZgJXYKeI",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"operation_id\": 9,\n  \"num_1\" :2,\n  \"num_2\" : 2\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/transactions",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"transactions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/transaction/id delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY4NDcxOTIzMCwianRpIjoiNmQ2N2ZlNWItMGZiMi00ZWJjLWE0ZmItZTNiMWE4NGNiMmM2IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MiwibmJmIjoxNjg0NzE5MjMwLCJleHAiOjE2ODQ3MjI4MzB9.3UWH9qEWZpJNIJ52GPlt6EEtoICLx98oibvZgJXYKeI",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"operation_id\": 9,\n  \"num_1\" :2,\n  \"num_2\" : 2\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/transactions/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"transactions",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/transactions get all",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY4NDcxOTIzMCwianRpIjoiNmQ2N2ZlNWItMGZiMi00ZWJjLWE0ZmItZTNiMWE4NGNiMmM2IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MiwibmJmIjoxNjg0NzE5MjMwLCJleHAiOjE2ODQ3MjI4MzB9.3UWH9qEWZpJNIJ52GPlt6EEtoICLx98oibvZgJXYKeI",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"operation_id\": 9,\n  \"num_1\" :2,\n  \"num_2\" : 2\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/transactions",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"transactions"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Operations",
+			"item": [
+				{
+					"name": "/operations get all",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY4NDcxOTIzMCwianRpIjoiNmQ2N2ZlNWItMGZiMi00ZWJjLWE0ZmItZTNiMWE4NGNiMmM2IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MiwibmJmIjoxNjg0NzE5MjMwLCJleHAiOjE2ODQ3MjI4MzB9.3UWH9qEWZpJNIJ52GPlt6EEtoICLx98oibvZgJXYKeI",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"operation_id\": 9,\n  \"num_1\" :2,\n  \"num_2\" : 2\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/transactions",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"transactions"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "ec2-18-219-245-237.us-east-2.compute.amazonaws.com:5000/api/v1/"
+		}
+	]
+}
