@@ -3,8 +3,9 @@
 This is a Flask API that serves as the backend for a Vue.js application. It provides endpoints to handle user authentication, perform mathematical calculations, and manage transactions.
 
 ## Live Version 
-- Base URL:http://ec2-3-15-30-72.us-east-2.compute.amazonaws.com:5000 --api/v1/...
-- Swagger: http://ec2-3-15-30-72.us-east-2.compute.amazonaws.com:5000/swagger-ui
+- Base URL:http://ec2-18-219-245-237.us-east-2.compute.amazonaws.com:5000 --api/v1/...
+- Swagger: http://ec2-18-219-245-237.us-east-2.compute.amazonaws.com:5000/swagger-ui
+- Postman collection: https://github.com/luis-reyes/arithmetic-calculator-api/blob/main/ArithmeticCalculatorAPI.postman_collection.json
 - Server: AWS EC2
 - Database: AWS RDS
 
